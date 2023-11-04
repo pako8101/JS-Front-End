@@ -4,7 +4,7 @@ function solve(arr,num) {
       newArr.push(arr[index]);
        
        
-    }console.log(newArr.join("\n")); 
+    }return newArr;
 }
 
 

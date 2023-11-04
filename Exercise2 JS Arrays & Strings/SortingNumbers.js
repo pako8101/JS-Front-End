@@ -3,13 +3,13 @@ function solve(arr) {
     const length = arr.length;
     const result = [];
     for (let index = 0; index < length/2; index++) {
-       result.push(arr[index]);
-       result.push(arr[length - index - 1])
+       result.push(arr.shift());
+       result.push(arr.pop());
     }
-    if (length/2 !== 0) {
+    if (length%2 !== 0) {
         result.push(arr[Math.floor(length/2)]);
     }
-    console.log(result);
+    return result;
 }
 
 
