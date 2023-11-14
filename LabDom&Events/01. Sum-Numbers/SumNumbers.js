@@ -6,7 +6,7 @@ function calc() {
 
    document.getElementById("sum").value = sum;
 
-   const test = document.querySelector("#test");
-test.innerHTML += "<input />";
+  /* const test = document.querySelector("#test");
+test.innerHTML += "<input />";*/
 }
 
