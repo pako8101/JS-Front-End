@@ -1,5 +1,5 @@
 function solve(currentStock,deliveredStock) {
-    const products = [...currentStock, ...deliveredStock];
+  /*  const products = [...currentStock, ...deliveredStock];
     //currentStock.concat(deliveredStock);
     const stock =  products.reduce((acc,curr,i) =>{
         if (i % 2 !==0) {
@@ -18,13 +18,37 @@ if (i% 2===0) {
         acc[curr] += Number(products[i+1]) ;
     }
 }*/
-return acc;
+/*return acc;
     },{})
 
 Object.keys(stock).forEach((key)=>{
     console.log(`${key} -> ${stock[key]}`);
-})
+})*/
 
+//const stock = {};
+const stock = {};
+for (let index = 0; index < currentStock.length; index+=2) {
+    let product = currentStock[index];
+    let quantity = Number(currentStock[index+1]);
+
+    !stock.hasOwnProperty(product) ? stock[product] = quantity
+    : stock[product] += quantity;
+
+}
+for (let index = 0; index < deliveredStock.length; index+=2) {
+    let product = deliveredStock[index];
+    let quantity = Number(deliveredStock[index+1]);
+
+    !stock.hasOwnProperty(product) ? stock[product] = quantity
+    : stock[product] += quantity;
+
+}
+  // Object.keys(products).forEach((key)=>{
+   // console.log(`${key} -> ${products[key]}`);
+//})
+for (const key in stock) {
+   console.log(`${key} -> ${stock[key]}`);
+}
 }
 
 

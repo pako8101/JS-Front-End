@@ -90,6 +90,8 @@ input.forEach(command => {
             }
         }
     });*/
+
+    
         movieLibrary.movies
     .filter(m => m.name && m.director && m.date)
     .forEach(m =>console.log(JSON.stringify(m))); 

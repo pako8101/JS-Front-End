@@ -12,6 +12,7 @@ return acc;
 
     console.log(`Name: ${name} -- Personal number: ${number}`);
    });*/
+   
 }
 
 
