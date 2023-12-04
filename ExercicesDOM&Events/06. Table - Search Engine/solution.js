@@ -13,7 +13,7 @@ const activeRows = Array.from(document.querySelectorAll('tbody tr.select'))
     cells.filter((cell) => cell.textContent.includes(searchQuery))
     .forEach((cell) => {
       cell.parentElement.classList.add("select");
-    })
+    }) 
 
     /*cells.forEach((cell) => {
       if (cell.textContent.includes(searchQuery)) {

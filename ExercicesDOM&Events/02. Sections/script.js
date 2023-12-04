@@ -6,7 +6,7 @@ function create(words) {
    
    const div = document.createElement("div");
    const p = document.createElement("p");
-   p.textContent = word
+   p.textContent = word 
    p.style.display = 'none';
 
    div.appendChild(p);

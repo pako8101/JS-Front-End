@@ -14,6 +14,7 @@ function solve() {
     container.appendChild(p);
   }
 
+
   // Approach 2
 
   /*input.reduce((acc,curr) => {
