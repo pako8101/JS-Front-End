@@ -14,6 +14,12 @@ async function loadSinglePost() {
   let comments = Object.values(result).filter(
     (comment) => comment.postId === selectedPost.id
   );
+  comments.forEach((comment) => {
+    const li = document.createElement("li");
+    li.id = comment.id;
+    li.textContent = comment.textContent;
+    document.querySelector("#post-comments").appendChild(li);
+  });
 }
 
 async function loadPosts() {
@@ -26,7 +32,7 @@ async function loadPosts() {
     result.forEach((post) => {
       const option = document.createElement("option");
       option.value = post.id;
-      option.text = post.title;
+      option.textContent = post.title;
 
       postDropdown.appendChild(option);
     })
